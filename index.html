@@ -4,20 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dongyuan Zhai</title>
+  <meta name="description" content="Dongyuan Zhai, Computer Science student at HKUST.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: -apple-system, sans-serif; max-width: 640px; margin: 80px auto; padding: 0 20px; line-height: 1.6; color: #2d2a26; background: #faf6ef; }
-    h1 { margin-bottom: 0; }
-    .sub { color: #666; margin-top: 4px; }
-    a { color: #0969da; }
+    :root {
+      --bg: #faf6ef;
+      --card: #fffdf8;
+      --text: #2d2a26;
+      --muted: #6b655c;
+      --border: #e8e1d4;
+      --link: #0969da;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1a17;
+        --card: #24211d;
+        --text: #ece6da;
+        --muted: #a39b8e;
+        --border: #3a352e;
+        --link: #58a6ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, sans-serif; font-size: 17px; line-height: 1.7; }
+    main { max-width: 680px; margin: 0 auto; padding: 88px 24px 64px; }
+    h1, h2 { font-family: "Newsreader", Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+    h1 { font-size: 2.6rem; line-height: 1.1; margin: 0; }
+    h2 { font-size: 1.5rem; margin: 56px 0 16px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero { display: flex; align-items: center; gap: 24px; }
+    .avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--border); flex-shrink: 0; }
+    .sub { color: var(--muted); margin: 6px 0 0; }
+    .projects { display: grid; gap: 16px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+    .card h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 600; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 0.8rem; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; }
+    .links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 24px; }
+    footer { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    @media (max-width: 520px) {
+      main { padding-top: 56px; }
+      .hero { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 2.1rem; }
+    }
   </style>
 </head>
 <body>
-  <h1>Dongyuan Zhai</h1>
-  <p class="sub">Computer Science @ HKUST</p>
-  <h2>About</h2>
-  <p>Hi, I'm a second-year CS student at HKUST, where my days are split between debugging C++, proving algorithms correct, and teaching machines to think a little.</p>
-  <p>Outside of code, you'll find me with Mandarin pop in my headphones. I believe good software, like a good song, should feel simple even when it isn't.</p>
-  <h2>Links</h2>
-  <p><a href="https://github.com/DongyuanZhai">GitHub</a></p>
+  <main>
+    <header class="hero">
+      <img class="avatar" src="avatar.jpg" alt="Photo of Dongyuan Zhai" onerror="this.remove()">
+      <div>
+        <h1>Dongyuan Zhai</h1>
+        <p class="sub">Computer Science @ HKUST</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>Hi, I'm a second-year CS student at HKUST, where my days are split between debugging C++, proving algorithms correct, and teaching machines to think a little.</p>
+      <p>Outside of code, you'll find me with Mandarin pop in my headphones. I believe good software, like a good song, should feel simple even when it isn't.</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3><a href="https://github.com/DongyuanZhai/DongyuanZhai.github.io">This Website</a></h3>
+          <p>My personal homepage, written by hand in HTML and CSS and hosted on GitHub Pages.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div>
+        </div>
+        <div class="card">
+          <h3>Next Project</h3>
+          <p>Something new is on the way. Check back soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul class="links">
+        <li><a href="https://github.com/DongyuanZhai">GitHub</a></li>
+        <li><a href="mailto:dzhai@connect.ust.hk">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/dongyuanzhai/">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <footer>© 2026 Dongyuan Zhai</footer>
+  </main>
 </body>
 </html>
